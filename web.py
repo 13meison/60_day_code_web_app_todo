@@ -16,9 +16,9 @@ def add_todo():
     functions.write_todos(todos)
 
 
-st.title('My ToDo App')
-st.subheader('This is my todo app')
-st.write('My simple text')
+st.title('My ToDo App for my children')
+st.subheader('Список задач для Влада и Лизы')
+st.write('Пример')
 for index, todo in enumerate(functions.get_todos()):
     checkbox = st.checkbox(todo[0:-1], key=todo)
     if checkbox:
