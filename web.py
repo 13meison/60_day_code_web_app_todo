@@ -8,7 +8,7 @@ streamlit run web.py
 
 todos = functions.get_todos()
 
-
+st.set_page_config(layout='wide')
 def add_todo():
     todo = st.session_state['new_todo'] + '\n'
 
@@ -17,7 +17,7 @@ def add_todo():
 
 
 st.title('My ToDo App for my children')
-st.subheader('Список задач для Влада и Лизы')
+st.subheader('Список задач для <b>Влада и Лизы</b>', unsafe_allow_html=True)
 st.write('Пример')
 for index, todo in enumerate(functions.get_todos()):
     checkbox = st.checkbox(todo[0:-1], key=todo)
